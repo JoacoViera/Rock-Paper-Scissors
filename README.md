@@ -12,3 +12,7 @@ WHY NOT !? :V
 Don't click many times in the pock, paper or scissors buttons please :B
 
 
+# Oh, thanks!
+
+If you'd like to [say thanks](https://saythanks.io/to/JoacoViera) :) 
+And thanks to [uiGradients](https://uigradients.com) for the awesome background and to [Pixabay](https://pixabay.com) for the photos.
