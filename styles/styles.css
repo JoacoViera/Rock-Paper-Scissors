@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+  background: #6441A5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+}
+
+.score {
+  color: rgb(224, 224, 224);
+  height: 28vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.score h2 {
+  font-size: 30px;
+}
+.score p {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.intro {
+  color: rgb(224, 224, 224);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+}
+
+.score .player-score h2{
+  color: aquamarine
+}
+
+.score .computer-score h2{
+  color: peru;
+}
+
+.intro h1 {
+  font-size: 50px;
+}
+
+.match button:hover{
+  background:rgb(177, 125, 28);
+  color: rgb(224, 224, 224);
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+.winner {
+  color: rgb(224, 224, 224);
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hands,
+.moves {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-hand {
+  transform: rotateY(180deg);
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+}
+
+/* I TOOK THIS FROM THIS SITE, ITS NOT MINE!
+https://codepen.io/chriscoyier/embed/zrGvaq?height=281&theme-id=1&slug-hash=zrGvaq&default-tab=result&user=chriscoyier&name=cp_embed_11#result-box 
+
+I love this effect ! :B*/
+
+.match button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: rgb(177, 125, 28);
+  font-size: 20px;
+  background: rgb(224, 224, 224);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.intro button {
+  border: 5px solid transparent;
+  background: #AED6D1;
+  color: #55706D;
+  border-radius: 40px;
+  padding: 15px 30px;
+  overflow: hidden;
+  width: 200px;
+  -webkit-transition: all        1.2s,
+ border     0.5s 1.2s,
+ -webkit-box-shadow 0.3s 1.5s;
+  transition: all        1.2s,
+ border     0.5s 1.2s,
+ -webkit-box-shadow 0.3s 1.5s;
+  transition: all        1.2s,
+ border     0.5s 1.2s,
+ box-shadow 0.3s 1.5s;
+  transition: all        1.2s,
+ border     0.5s 1.2s,
+ box-shadow 0.3s 1.5s,
+ -webkit-box-shadow 0.3s 1.5s;
+  white-space: nowrap;
+  text-indent: 23px;
+  font-weight: bold;
+}
+
+.intro button span {
+  display: inline-block;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+  font-weight: normal;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s 0.5s,
+ -webkit-transform 0.4s 0.5s;
+  transition: opacity 0.1s 0.5s,
+ -webkit-transform 0.4s 0.5s;
+  transition: opacity 0.1s 0.5s,
+ transform 0.4s 0.5s;
+  transition: opacity 0.1s 0.5s,
+ transform 0.4s 0.5s,
+ -webkit-transform 0.4s 0.5s;
+}
+
+.intro button:hover {
+  text-indent: 0;
+  background: #55706D;
+  color: #FFE8A3;
+  width: 250px;
+  border: 10px solid #8DCCC4;
+  -webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+.intro button:hover span {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
