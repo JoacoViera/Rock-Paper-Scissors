@@ -83,6 +83,17 @@ body{
   margin-bottom: 20px;
 }
 
+.match button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: rgb(177, 125, 28);
+  font-size: 20px;
+  background: rgb(224, 224, 224);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .hands,
 .moves {
   display: flex;
@@ -157,18 +168,6 @@ https://codepen.io/chriscoyier/embed/zrGvaq?height=281&theme-id=1&slug-hash=zrGv
 
 I love this effect ! :B*/
 
-.match button {
-  width: 150px;
-  height: 50px;
-  border: none;
-  color: rgb(177, 125, 28);
-  font-size: 20px;
-  background: rgb(224, 224, 224);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-
 .intro button {
   margin-top: 10em;
   border: 5px solid transparent;
@@ -177,29 +176,29 @@ I love this effect ! :B*/
   border-radius: 40px;
   padding: 15px 30px;
   overflow: hidden;
-  width: 200px;
+  width: 180px;
   -webkit-transition: all        1.2s,
- border     0.5s 1.2s,
- -webkit-box-shadow 0.3s 1.5s;
-  transition: all        1.2s,
- border     0.5s 1.2s,
- -webkit-box-shadow 0.3s 1.5s;
-  transition: all        1.2s,
- border     0.5s 1.2s,
- box-shadow 0.3s 1.5s;
-  transition: all        1.2s,
- border     0.5s 1.2s,
- box-shadow 0.3s 1.5s,
- -webkit-box-shadow 0.3s 1.5s;
-  white-space: nowrap;
-  text-indent: 23px;
-  font-weight: bold;
+  border     0.5s 1.2s,
+  -webkit-box-shadow 0.3s 1.5s;
+    transition: all        1.2s,
+  border     0.5s 1.2s,
+  -webkit-box-shadow 0.3s 1.5s;
+    transition: all        1.2s,
+  border     0.5s 1.2s,
+  box-shadow 0.3s 1.5s;
+    transition: all        1.2s,
+  border     0.5s 1.2s,
+  box-shadow 0.3s 1.5s,
+  -webkit-box-shadow 0.3s 1.5s;
+    white-space: nowrap;
+    text-indent: 23px;
+    font-weight: bold;
 }
 
 .intro button span {
   display: inline-block;
-  -webkit-transform: translateX(300px);
-          transform: translateX(300px);
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
   font-weight: normal;
   opacity: 0;
   -webkit-transition: opacity 0.1s 0.5s,
@@ -217,7 +216,7 @@ I love this effect ! :B*/
   text-indent: 0;
   background: #55706D;
   color: #FFE8A3;
-  width: 250px;
+  width: 300px;
   border: 10px solid #8DCCC4;
   -webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
