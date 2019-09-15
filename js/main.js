@@ -8,11 +8,13 @@ const game = () => {
     const playBtn = document.querySelector(".intro button");
     const introScreen = document.querySelector(".intro");
     const match = document.querySelector(".match");
+    const score = document.querySelector(".score");
 
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("inactive");
       match.classList.add("matchStart");
       match.style.opacity = "1";
+      score.style.opacity = "1";
     });
   };
 
@@ -105,13 +107,13 @@ const game = () => {
     if (playerChoice === "paper") {
       if (computerChoice === "scissors") {
         winner.textContent = "Computer Wins";
+        winner.style.color = computerColor;
         cScore++;
         updateScore();
         return;
       } else {
         winner.textContent = "Player Wins";
         winner.style.color = playerColor;
-        winner.style.color = computerColor;
         pScore++;
         updateScore();
         return;

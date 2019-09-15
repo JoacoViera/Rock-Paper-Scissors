@@ -16,9 +16,13 @@ body{
 .score {
   color: rgb(224, 224, 224);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-top: 3em;
+  transition: opacity 0.5s ease 0.5s;
+}
+.score div{
+  margin: 0 3em;
 }
 .score h2 {
   font-size: 30px;
@@ -110,6 +114,12 @@ body{
 
 .player-hand {
   transform: rotateY(180deg);
+}
+
+.player-hand,
+.computer-hand{
+  width: 250px;
+  height: 250px;
 }
 
 
