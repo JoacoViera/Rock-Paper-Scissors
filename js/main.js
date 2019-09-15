@@ -12,6 +12,7 @@ const game = () => {
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("inactive");
       match.classList.add("matchStart");
+      match.style.opacity = "1";
     });
   };
 
