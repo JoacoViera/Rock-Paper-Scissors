@@ -1,22 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
-  background: #6441A5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;
+  background: #009FFF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .score {
   color: rgb(224, 224, 224);
-  height: 28vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  margin-top: 3em;
 }
 .score h2 {
   font-size: 30px;
@@ -29,20 +31,20 @@ body{
 
 .intro {
   color: rgb(224, 224, 224);
-  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-top: 5em;
   transition: opacity 0.5s ease;
 }
 
 .score .player-score h2{
-  color: aquamarine
+  color: #1993EB
 }
 
 .score .computer-score h2{
-  color: peru;
+  color: #E9304D;
 }
 
 .intro h1 {
@@ -55,12 +57,25 @@ body{
 }
 
 .match {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  opacity: 0;
   transition: opacity 0.5s ease 0.5s;
+  margin-top: 5em;
 }
+
+/* Takes away the main screen*/
+.inactive {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+/*Brings the game screen*/
+.matchStart{
+  display : block;
+  opacity : 1;
+  pointer-events : all;
+}
+
 .winner {
   color: rgb(224, 224, 224);
   text-align: center;
@@ -71,23 +86,22 @@ body{
 .hands,
 .moves {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+.moves{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.moves button{
+  margin: 2em 2em;
 }
 
 .player-hand {
   transform: rotateY(180deg);
 }
 
-div.fadeOut {
-  opacity: 0;
-  pointer-events: none;
-}
-
-div.fadeIn {
-  opacity: 1;
-  pointer-events: all;
-}
 
 @keyframes shakePlayer {
   0% {
@@ -137,6 +151,7 @@ div.fadeIn {
   }
 }
 
+
 /* I TOOK THIS FROM THIS SITE, ITS NOT MINE!
 https://codepen.io/chriscoyier/embed/zrGvaq?height=281&theme-id=1&slug-hash=zrGvaq&default-tab=result&user=chriscoyier&name=cp_embed_11#result-box 
 
@@ -155,6 +170,7 @@ I love this effect ! :B*/
 
 
 .intro button {
+  margin-top: 10em;
   border: 5px solid transparent;
   background: #AED6D1;
   color: #55706D;
